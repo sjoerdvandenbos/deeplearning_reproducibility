@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from architecture.resnet34.pretrained_resnet34 import Resnet34_Pretrained
-from upsampling_block import UpsampBlock
+from architecture.upsampling_block import UpsampBlock
 
 
 class Net(nn.Module):
