@@ -27,6 +27,10 @@ class CSEBlock(nn.Module):
         self.fc2 = nn.Linear(in_channels // reduction, in_channels)
         self.sigmoid = nn.Sigmoid()
 
+        # Do He. K. et al. init for Upsampling decoder
+        nn.init.kaiming_uniform_(self.fc1.weight, mode='fan_in', nonlinearity='relu')
+        nn.init.kaiming_uniform_(self.fc2.weight, mode='fan_in', nonlinearity='relu')
+
     def forward(self, x):
         batch_size, num_channels, _, _ = x.size()
 

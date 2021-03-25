@@ -21,9 +21,10 @@ class SSEBlock(nn.Module):
         super(SSEBlock, self).__init__()
         # Output channel = 1, 1x1 convolution
         self.conv = nn.Conv2d(in_channels, 1, 1)
-        # Do He, K. et al. init as described in the paper.
-        nn.init.kaiming_uniform_(self.conv, mode='fan_in', nonlinearity='relu')
         self.sigmoid = nn.Sigmoid()
+
+        # Do He. K. et al. init for Upsampling decoder
+        nn.init.kaiming_uniform_(self.conv.weight, mode='fan_in', nonlinearity='relu')
 
     def forward(self, x):
         batch_size, num_channels, H, W = x.size()

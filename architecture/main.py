@@ -47,15 +47,11 @@ class Net(nn.Module):
         self.conv_purp_to_mag_5 = nn.ConvTranspose2d(256, 1, 2, stride=2)
 
         # Do He. K. et al. init for Upsampling decoder
-        nn.init.kaiming_uniform_(self.conv_mag_to_purp_1, mode='fan_in', nonlinearity='relu')
-        nn.init.kaiming_uniform_(self.conv_mag_to_purp_2, mode='fan_in', nonlinearity='relu')
-        nn.init.kaiming_uniform_(self.conv_mag_to_purp_3, mode='fan_in', nonlinearity='relu')
-        nn.init.kaiming_uniform_(self.conv_mag_to_purp_4, mode='fan_in', nonlinearity='relu')
-        nn.init.kaiming_uniform_(self.conv_purp_to_mag_1, mode='fan_in', nonlinearity='relu')
-        nn.init.kaiming_uniform_(self.conv_purp_to_mag_2, mode='fan_in', nonlinearity='relu')
-        nn.init.kaiming_uniform_(self.conv_purp_to_mag_3, mode='fan_in', nonlinearity='relu')
-        nn.init.kaiming_uniform_(self.conv_purp_to_mag_4, mode='fan_in', nonlinearity='relu')
-        nn.init.kaiming_uniform_(self.conv_purp_to_mag_5, mode='fan_in', nonlinearity='relu')
+        nn.init.kaiming_uniform_(self.conv_purp_to_mag_1.weight, mode='fan_in', nonlinearity='relu')
+        nn.init.kaiming_uniform_(self.conv_purp_to_mag_2.weight, mode='fan_in', nonlinearity='relu')
+        nn.init.kaiming_uniform_(self.conv_purp_to_mag_3.weight, mode='fan_in', nonlinearity='relu')
+        nn.init.kaiming_uniform_(self.conv_purp_to_mag_4.weight, mode='fan_in', nonlinearity='relu')
+        nn.init.kaiming_uniform_(self.conv_purp_to_mag_5.weight, mode='fan_in', nonlinearity='relu')
 
     def forward(self, x):
         # Traverse down the architecture (ResNet34)
