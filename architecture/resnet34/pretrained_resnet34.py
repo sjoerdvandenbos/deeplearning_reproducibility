@@ -1,7 +1,7 @@
 import torch.nn as nn
 import torchvision.models as models
 from collections import OrderedDict
-from resnet34.resnet34 import Resnet34
+from architecture.resnet34.resnet34 import Resnet34
 
 
 class Resnet34_Pretrained(nn.Module):

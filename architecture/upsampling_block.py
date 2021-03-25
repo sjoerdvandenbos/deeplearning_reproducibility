@@ -1,5 +1,5 @@
 import torch.nn as nn
-from scsenet.scse_block import SCSEBlock
+from architecture.scsenet.scse_block import SCSEBlock
 
 
 class UpsampBlock(nn.Module):

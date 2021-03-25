@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from resnet34.pretrained_resnet34 import Resnet34_Pretrained
+from architecture.resnet34.pretrained_resnet34 import Resnet34_Pretrained
 from upsampling_block import UpsampBlock
 
 

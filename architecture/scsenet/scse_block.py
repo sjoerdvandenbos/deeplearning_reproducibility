@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
-from scsenet.cse_block import CSEBlock
-from scsenet.sse_block import SSEBlock
+from architecture.scsenet.cse_block import CSEBlock
+from architecture.scsenet.sse_block import SSEBlock
 
 
 class SCSEBlock(nn.Module):

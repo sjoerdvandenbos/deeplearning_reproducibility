@@ -1,5 +1,5 @@
 import torch.nn as nn
-from resnet34.resnet_block import ResBlock
+from architecture.resnet34.resnet_block import ResBlock
 
 
 class Resnet34(nn.Module):
