@@ -1,0 +1,10 @@
+fastai
+torchsummary
+torchviz
+ipywidgets
+matplotlib
+numpy
+pandas
+scikit-learn
+torch
+torchvision
