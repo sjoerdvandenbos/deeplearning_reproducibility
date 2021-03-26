@@ -7,17 +7,17 @@ from architecture.upsampling_block import UpsampBlock
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
-        self.pretrained_model = Resnet34_Pretrained()
+        pretrained_model = Resnet34_Pretrained()
         # 3 input image channels, 64 output channels, 7x7 convolution, stride 2, padding 3
         # -- Blue --
-        self.blueBlock = nn.Sequential(*(list(list(self.pretrained_model.children())[0].children())[:3]))
+        self.blueBlock = nn.Sequential(*(list(list(pretrained_model.children())[0].children())[:3]))
 
         # -- Green --
         # maxpooling stride default is kernel size
-        self.resBlock1 = nn.Sequential(*(list(list(self.pretrained_model.children())[0].children())[3:5]))
-        self.resBlock2 = nn.Sequential(*(list(list(self.pretrained_model.children())[0].children())[5:6]))
-        self.resBlock3 = nn.Sequential(*(list(list(self.pretrained_model.children())[0].children())[6:7]))
-        self.resBlock4 = nn.Sequential(*(list(list(self.pretrained_model.children())[0].children())[7:]))
+        self.resBlock1 = nn.Sequential(*(list(list(pretrained_model.children())[0].children())[3:5]))
+        self.resBlock2 = nn.Sequential(*(list(list(pretrained_model.children())[0].children())[5:6]))
+        self.resBlock3 = nn.Sequential(*(list(list(pretrained_model.children())[0].children())[6:7]))
+        self.resBlock4 = nn.Sequential(*(list(list(pretrained_model.children())[0].children())[7:]))
 
         # -- Yellow --
         # 64/128/256 input image channels, 128 output channels, 1x1 convolution, stride 1
