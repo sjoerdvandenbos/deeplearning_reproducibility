@@ -43,5 +43,5 @@ if __name__ == "__main__":
 
     mask_dir = pathlib.Path("seg_gt")
     mask_transform = None
-    img, mask = Crack500Dataset(img_dir, img_transform, mask_dir, mask_transform)[0]    # get the first img, mask tuplet
+    img, mask = CFD(img_dir, img_transform, mask_dir, mask_transform)[0]    # get the first img, mask tuplet
     print(f"image shape: {img.size}\nmask shape: {mask.size}")
