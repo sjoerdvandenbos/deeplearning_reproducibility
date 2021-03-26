@@ -1,4 +1,3 @@
-fastai
 torchsummary
 torchviz
 ipywidgets
