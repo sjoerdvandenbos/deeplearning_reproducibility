@@ -53,6 +53,8 @@ class Net(nn.Module):
         nn.init.kaiming_uniform_(self.conv_purp_to_mag_4.weight, mode='fan_in', nonlinearity='relu')
         nn.init.kaiming_uniform_(self.conv_purp_to_mag_5.weight, mode='fan_in', nonlinearity='relu')
 
+        self.sigmoid = nn.Sigmoid()
+
     def forward(self, x):
         # Traverse down the architecture (ResNet34)
         y = self.blueBlock(x)
@@ -88,7 +90,9 @@ class Net(nn.Module):
         y_y1 = torch.cat((y_y1, y_y2), dim=1)
         y_y1 = self.conv_mag_to_purp_4(y_y1)
 
-        return self.conv_purp_to_mag_5(y_y1)
+        y_new = self.conv_purp_to_mag_5(y_y1)
+
+        return self.sigmoid(y_new)
 
 #
 # from torchsummary import summary
