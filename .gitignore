@@ -1,7 +1,12 @@
 # Added entries by Sjoerd & Reinier
-**/datasets/*.jpg
-**/datasets/*.png
-**/datasets/*.zip
+datasets/CFD/cfd_image/*.jpg
+datasets/CFD/cfd_image/*.png
+datasets/CFD/seg_gt/*.jpg
+datasets/CFD/seg_gt/*.png
+datasets/CRACK500/crack_image/*.jpg
+datasets/CRACK500/crack_image/*.png
+datasets/CRACK500/seg_gt/*.jpg
+datasets/CRACK500/seg_gt/*.png
 model_parameters_gpu.pt
 
 # Discard google drive 
