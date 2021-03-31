@@ -2,3 +2,5 @@ torchsummary
 torchviz
 ipywidgets
 matplotlib
+jupyternotify
+tqdm
