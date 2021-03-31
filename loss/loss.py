@@ -15,9 +15,6 @@ def batch_dice_loss(true_val, pred_val, epsilon=1e-8):
     Returns:
         dice_loss: the Dice loss.
     """
-    # Sigmoid -> [0, 1], reflect probabilities
-    pred_val = (torch.sigmoid(pred_val) >= 0.5).float()
-
     # Flattened from [N, 1, H, W] to [N, H*W]
     true_val = true_val.flatten(start_dim=1)
     pred_val = pred_val.flatten(start_dim=1)
