@@ -1,5 +1,5 @@
 # Added entries by Sjoerd & Reinier
-/datasets/CRACK500
+/datasets/
 model_parameters_gpu.pt
 
 # Discard google drive 
