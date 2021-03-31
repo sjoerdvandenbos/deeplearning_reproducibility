@@ -1,7 +1,7 @@
 # Added entries by Sjoerd & Reinier
-datasets/*.jpg
-datasets/*.png
-datasets/*.zip
+datasets/**.jpg
+datasets/**.png
+datasets/**.zip
 model_parameters_gpu.pt
 
 # Discard google drive 
