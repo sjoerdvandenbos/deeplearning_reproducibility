@@ -2,6 +2,11 @@
 /datasets/CRACK500
 model_parameters_gpu.pt
 
+# Discard google drive 
+**/**/Icon?
+**/Icon?
+Icon?
+
 # Created by https://www.toptal.com/developers/gitignore/api/macos,linux,windows,python,jupyternotebooks,jetbrains+all
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,linux,windows,python,jupyternotebooks,jetbrains+all
 
