@@ -1,5 +1,6 @@
 # Added entries by Sjoerd & Reinier
 /datasets/CRACK500
+model_parameters.pt
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,linux,windows,python,jupyternotebooks,jetbrains+all
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,linux,windows,python,jupyternotebooks,jetbrains+all
