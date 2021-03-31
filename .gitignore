@@ -1,5 +1,5 @@
 # Added entries by Sjoerd & Reinier
-/datasets/
+datasets/*
 model_parameters_gpu.pt
 
 # Discard google drive 
