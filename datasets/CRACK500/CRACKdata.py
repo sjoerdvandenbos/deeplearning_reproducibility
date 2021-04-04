@@ -5,6 +5,7 @@ import pathlib
 import numpy as np
 from torch.utils.data import Dataset
 from PIL import Image
+import torch
 
 class C5D(Dataset):
     def __init__(self, img_dir, img_transform, mask_dir, mask_transform):
