@@ -10,6 +10,8 @@ datasets/CRACK500/seg_gt/*.png
 model_parameters_gpu.pt
 model_parameters_gpu_test.pt
 model_parameters.pt
+model_parameters_CFD.pt
+model_parameters_C5D.pt
 metrics.csv
 
 # Discard google drive 
