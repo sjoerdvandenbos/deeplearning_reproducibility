@@ -8,14 +8,12 @@ import torch
 import os
 
 
-def get_data_loaders(split_seed, img_factor=1, dataset="CFD"):
+def get_data_loaders(split_seed, bs_train, bs_test, img_factor=1, dataset="CFD"):
     # Define standard variables
     current_path = os.path.abspath(os.getcwd())
     image = "/CFD/cfd_image/"
     gt = "/CFD/seg_gt/"
-    ratio = [71, 47]
-    batch_size = 10
-    batch_size_t = 10
+    ratio = [70, 48]
 
     if dataset == "CRACK500":
         image = "/CRACK500/crack_image/"
@@ -33,12 +31,12 @@ def get_data_loaders(split_seed, img_factor=1, dataset="CFD"):
     print(f"dataset len: {len(dataset)}")
     train_data, test_data = random_split(dataset, ratio,
                                          generator=torch.Generator().manual_seed(split_seed))
-    train_loader = DataLoader(train_data, batch_size=batch_size)
-    test_loader = DataLoader(test_data, batch_size=batch_size_t)
+    train_loader = DataLoader(train_data, batch_size=bs_train)
+    test_loader = DataLoader(test_data, batch_size=bs_test)
 
     print(
-        f"dataset: {len(dataset)}, objects_train: {len(train_data)}, BS_train: {batch_size}, dataloader len: {len(train_loader)}")
-    print(f"objects_test: {len(test_data)}, BS_test: {batch_size_t}, dataloader len: {len(test_loader)}")
+        f"dataset: {len(dataset)}, objects_train: {len(train_data)}, BS_train: {bs_train}, dataloader len: {len(train_loader)}")
+    print(f"objects_test: {len(test_data)}, BS_test: {bs_test}, dataloader len: {len(test_loader)}")
 
     return dataset, train_loader, test_loader
 
