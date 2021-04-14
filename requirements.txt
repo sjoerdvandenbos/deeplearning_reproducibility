@@ -1,5 +1,4 @@
-torchsummary
-torchviz
+torchinfo
 ipywidgets
 matplotlib
 jupyternotify
