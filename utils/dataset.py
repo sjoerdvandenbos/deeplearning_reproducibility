@@ -11,15 +11,15 @@ import os
 def get_data_loaders(split_seed, img_factor=1, dataset="CFD"):
     # Define standard variables
     current_path = os.path.abspath(os.getcwd())
-    image = "/datasets/CFD/cfd_image/"
-    gt = "/datasets/CFD/seg_gt/"
+    image = "/CFD/cfd_image/"
+    gt = "/CFD/seg_gt/"
     ratio = [71, 47]
     batch_size = 10
-    batch_size_t = 47
+    batch_size_t = 10
 
     if dataset == "CRACK500":
-        image = "/datasets/CRACK500/crack_image/"
-        gt = "/datasets/CRACK500/seg_gt/"
+        image = "/CRACK500/crack_image/"
+        gt = "/CRACK500/seg_gt/"
         ratio = [2021, 1347]
 
     tf_compos, tf_compos_gt = get_transforms(img_factor)
