@@ -15,7 +15,7 @@ def batch_get_new_label(old_labels, predictions):
     return new_label
 
 
-def get_prec_recall(data_loader, network, device=torch.device("cpu")):
+def get_prec_recall(data_loader, network, device):
     network.eval()
     isect_sum = torch.tensor([0], dtype=torch.float32, device=device)
     positive_predicts_pixels = 0
