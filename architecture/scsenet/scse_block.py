@@ -17,4 +17,4 @@ class SCSEBlock(nn.Module):
         self.SSE = SSEBlock(in_channels)
 
     def forward(self, x):
-        return torch.max(self.CSE(x), self.SSE(x))
+        return ( self.CSE(x) + self.SSE(x) )
